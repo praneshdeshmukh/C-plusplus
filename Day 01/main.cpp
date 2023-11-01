@@ -64,7 +64,7 @@ void extremePrintInArray(int ex[], int size){
         right--;
         
     }
-   
+   // o/p - 10 50 20 40 30
     
 }
 
@@ -203,7 +203,7 @@ int main()
     // Extreme print in an array:
     // int ex[5] = {10,20,30,40,50};
     // int size = 5;
-    // extremePrintInArray(ex, size);
+    // extremePrintInArray(ex, size);  // 10 50 20 40 30
     
     return 0;
 }
