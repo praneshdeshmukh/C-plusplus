@@ -38,6 +38,80 @@ void sortColors(int nums[], int size) {
     }
     cout<<endl;
 }
+// --------------------------------------------------------
+class Solution {
+
+public:
+void sortColorsLC(vector<int>& nums) {
+        
+    // APPROACH 1 - COUNTING
+        int n=nums.size();
+        int ones=0;
+        int twos=0;
+        int zeros=0; 
+
+        for(int i=0;i<n;i++) {
+            if(nums[i]==0)  {
+                zeros++;
+            } 
+            else if(nums[i] == 2) {
+                twos++;
+            }
+            else {
+                ones++;
+            }
+        }
+
+        int i=0;
+        while(zeros--) {
+            nums[i]=0;
+            i++;
+        }
+        while(ones--) {
+            nums[i]=1;
+            i++;
+        }
+        while(twos--) {
+            nums[i]=2;
+            i++;
+        }
+// --------------------------------------------------------
+    // APPROACH 2 - TWO POINTER
+
+        // int n = nums.size();
+        // int left=0; // first index
+        // int right=n-1; //lasr index
+        // int index=0;
+
+        //     while(index <= right) { 
+        //         // jo prynta maza index [looping variable] 
+        //         //right pointer cha agodar belong krto toh pryntach 
+        //         // keep moving;
+        //         //jsa index,  right ptr cha pudhe nighel STOP.
+
+        //         if(nums[index] == 0) {
+        //             swap(nums[index] , nums[left]); 
+        //             // left la pathavla 0 i.e red
+        //             left++;
+        //             index++;
+        //         }
+
+        //         else if(nums[index] == 2) {
+        //             swap(nums[index] , nums[right]) ;
+        //             right--;
+        //             // catch - no need of index++
+        //             //index++; 
+        //         }
+                
+        //         else {
+        //             index++;
+        //         }
+        //     }
+
+
+        }
+    };
+// --------------------------------------------------------
 int main()
 {
     int nums[] = {2,0,2,1,1,0};
