@@ -28,6 +28,7 @@ public:
 
             if(mid & 1) // odd element
             {
+                // left me jao
                 if(nums[mid-1] == nums[mid]) {
                     s = mid + 1;
                 }
@@ -39,6 +40,10 @@ public:
                 // even element
                 // right me jao
                 if(nums[mid+1] == nums[mid]) {
+                    // to avoid mid+1 wale ele ki duplicate checking
+                    // mid+2 kr rha hu
+                    // baki mid+1 se bhi ans aa jayega leking ek element
+                    // do baar check ho jayega aur kuch nai
                     s = mid+2;
                 }
                 // ya toh main right part pe khada hu
